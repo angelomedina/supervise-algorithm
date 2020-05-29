@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split #ML
 from sklearn.linear_model import LinearRegression
 
 #Leer el archivo .csv
-dataset = pd.read_csv("covid.csv")
+dataset = pd.read_csv("covid19CR.csv")
 x= dataset.iloc[:,:-1].values
 y= dataset.iloc[:,1].values
 
@@ -27,15 +27,15 @@ regresion.fit(x_train, y_train) #Se entrena el modelo
 
 #Predecir el test
 y_pred= regresion.predict(x_test)
-t= regresion.predict([[100.0]]) #Prediccion para 100 muertos
+t= regresion.predict([[100.0]]) #Prediccion para el día 100 del covid-19 en Costa Rica 
 
 #Visualizar los resultados
 #Usando las variables de entrenamiento
 plt.scatter(x_train,y_train, color="green")
 plt.plot(x_train, regresion.predict(x_train), color="red")
 plt.title("Regresion Lineal")
-plt.xlabel("Total Deaths")
-plt.ylabel("Total Cases")
+plt.xlabel("Dia")
+plt.ylabel("Casos Totales")
 plt.show()
 
 
