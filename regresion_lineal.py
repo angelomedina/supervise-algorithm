@@ -5,6 +5,7 @@ import numpy as np  #Matemática
 import matplotlib.pyplot as plt #Gráficos
 import pandas as pd  #Carga de datos
 from sklearn.model_selection import train_test_split #ML
+from sklearn.linear_model import LinearRegression
 
 #Leer el archivo .csv
 dataset = pd.read_csv("salary_dataset.csv")
@@ -21,7 +22,6 @@ x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.2, random_s
 # La regresion lineal simple no requiere de un escalado
 
 #Realizar el entrenamiento con las variables de entrenamiento x y
-from sklearn.linear_model import LinearRegression
 regresion = LinearRegression()  #Se crea objeto regresion lineal
 regresion.fit(x_train, y_train) #Se entrena el modelo
 
@@ -33,8 +33,8 @@ t= regresion.predict([[20.5]]) #Prediccion para 20 años y medios
 #Usando las variables de entrenamiento
 plt.scatter(x_train,y_train, color="green")
 plt.plot(x_train, regresion.predict(x_train), color="red")
-plt.title("Regresion lineal")
-plt.xlabel("Años de experiencias")
+plt.title("Regresion Lineal")
+plt.xlabel("Años de Experiencia")
 plt.ylabel("Salario")
 plt.show()
 
