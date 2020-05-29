@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split #ML
 from sklearn.linear_model import LinearRegression
 
 #Leer el archivo .csv
-dataset = pd.read_csv("salary_dataset.csv")
+dataset = pd.read_csv("covid.csv")
 x= dataset.iloc[:,:-1].values
 y= dataset.iloc[:,1].values
 
@@ -27,15 +27,15 @@ regresion.fit(x_train, y_train) #Se entrena el modelo
 
 #Predecir el test
 y_pred= regresion.predict(x_test)
-t= regresion.predict([[20.5]]) #Prediccion para 20 años y medios
+t= regresion.predict([[100.0]]) #Prediccion para 130 muertos
 
 #Visualizar los resultados
 #Usando las variables de entrenamiento
 plt.scatter(x_train,y_train, color="green")
 plt.plot(x_train, regresion.predict(x_train), color="red")
 plt.title("Regresion Lineal")
-plt.xlabel("Años de Experiencia")
-plt.ylabel("Salario")
+plt.xlabel("Total Deaths")
+plt.ylabel("Total Cases")
 plt.show()
 
 
