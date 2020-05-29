@@ -1,3 +1,1 @@
-# Algoritmo Supervisado: Regresión Lineal
-
-# Ver el Wiki
+# Algoritmo Supervisado: Regresión Lineal explciado en el Wiki
