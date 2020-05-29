@@ -1,1 +1,1 @@
-# supervise-algorithm
+# Algoritmo Supervisado: Regresión Lineal
