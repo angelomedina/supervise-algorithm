@@ -1,10 +1,12 @@
 #Regresion lineal simple 
 
-#Importando librerias
-import numpy as np  #Matematica
-import matplotlib.pyplot as plt #Graficos
+#Importación de librerías 
+import numpy as np  #Matemática
+import matplotlib.pyplot as plt #Gráficos
 import pandas as pd  #Carga de datos
+from sklearn.model_selection import train_test_split #ML
 
+#Leer el archivo .csv
 dataset = pd.read_csv("salary_dataset.csv")
 x= dataset.iloc[:,:-1].values
 y= dataset.iloc[:,1].values
@@ -14,7 +16,6 @@ y= dataset.iloc[:,1].values
 
 
 #Dividir el dataset en entrenamiento y testing
-from sklearn.model_selection import train_test_split
 x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.2, random_state=12)
 
 # La regresion lineal simple no requiere de un escalado
