@@ -27,7 +27,7 @@ regresion.fit(x_train, y_train) #Se entrena el modelo
 
 #Predecir el test
 y_pred= regresion.predict(x_test)
-t= regresion.predict([[100.0]]) #Prediccion para 130 muertos
+t= regresion.predict([[100.0]]) #Prediccion para 100 muertos
 
 #Visualizar los resultados
 #Usando las variables de entrenamiento
